@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6aslt1cf3y04"
-path="res://.godot/imported/BusMid.png-d880709e05589b834fdb9c33fb9effb1.ctex"
+path="res://.godot/imported/BusMid.png-0dd0fb3a32bfe04608d73063c97ff4c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/BusMid.png"
-dest_files=["res://.godot/imported/BusMid.png-d880709e05589b834fdb9c33fb9effb1.ctex"]
+source_file="res://assets/sprites/bus_sprites/BusMid.png"
+dest_files=["res://.godot/imported/BusMid.png-0dd0fb3a32bfe04608d73063c97ff4c4.ctex"]
 
 [params]
 
