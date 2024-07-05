@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc531v8523fh1"]
+[gd_scene load_steps=2 format=3 uid="uid://jctrq783j11c"]
 
-[ext_resource type="PackedScene" uid="uid://bhpj6aykw04g8" path="res://assets/scenes/right_backg.tscn" id="1_uqlih"]
+[ext_resource type="PackedScene" uid="uid://bhpj6aykw04g8" path="res://assets/scenes/baseVisuals/right_backg.tscn" id="1_uqlih"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(-125, 13)
