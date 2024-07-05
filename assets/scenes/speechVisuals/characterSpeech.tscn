@@ -32,4 +32,4 @@ position = Vector2(-6, 8)
 sprite_frames = SubResource("SpriteFrames_6mhff")
 animation = &"speaking"
 frame = 1
-frame_progress = 0.973435
+frame_progress = 0.636172

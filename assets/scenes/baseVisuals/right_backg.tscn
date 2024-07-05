@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhpj6aykw04g8"]
+[gd_scene load_steps=4 format=3 uid="uid://bhpj6aykw04g8"]
 
 [ext_resource type="Script" path="res://assets/scripts/right_backg.gd" id="1_dhy5f"]
 [ext_resource type="Texture2D" uid="uid://dao21up8n0apc" path="res://assets/sprites/rightBackg.png" id="2_n3rcg"]
-[ext_resource type="Texture2D" uid="uid://dxo0jjneal3m6" path="res://assets/sprites/bus_sprites/BusLow.png" id="3_w8gme"]
-[ext_resource type="Texture2D" uid="uid://c6aslt1cf3y04" path="res://assets/sprites/bus_sprites/BusMid.png" id="4_6b4qm"]
-[ext_resource type="Texture2D" uid="uid://upmsx7n5dr6u" path="res://assets/sprites/bus_sprites/BusFull.png" id="5_p34wh"]
+[ext_resource type="Texture2D" uid="uid://b3wfsnsn7njs4" path="res://assets/sprites/bus_sprites/Bus.png" id="6_wd8ar"]
 
 [node name="RightBackg" type="Node2D"]
 script = ExtResource("1_dhy5f")
@@ -13,27 +11,10 @@ script = ExtResource("1_dhy5f")
 scale = Vector2(2, 2.00733)
 texture = ExtResource("2_n3rcg")
 
-[node name="BusLow" type="Sprite2D" parent="."]
+[node name="Bus" type="Sprite2D" parent="RightBackg"]
 visible = false
-position = Vector2(99.4062, -78.75)
-scale = Vector2(0.0609132, 0.0830078)
-texture = ExtResource("3_w8gme")
-flip_h = true
-
-[node name="BusLow2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(145.352, -58)
-scale = Vector2(0.153717, 0.181915)
-texture = ExtResource("3_w8gme")
-
-[node name="BusMid" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(43, -45)
-scale = Vector2(0.443848, 0.481689)
-texture = ExtResource("4_6b4qm")
-
-[node name="BusFull" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-244, -19)
-scale = Vector2(1.2002, 1.17188)
-texture = ExtResource("5_p34wh")
+modulate = Color(0.987939, 0.953456, 0.744873, 1)
+self_modulate = Color(0.958775, 0.973461, 0.950667, 1)
+position = Vector2(-126.52, 2.70466)
+scale = Vector2(0.20604, 0.229588)
+texture = ExtResource("6_wd8ar")
