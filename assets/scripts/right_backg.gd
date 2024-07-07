@@ -13,8 +13,9 @@ var elapse = 0
 #constantes:
 
 # para as posições 0 1 2 3
-const scales = [Vector2(0.018,0.021), Vector2(0.029,0.036),Vector2(0.077,0.09),Vector2(0.206,0.23)]
-const positions = [Vector2(50,-40), Vector2(77,-27.4),Vector2(7,-10.96),Vector2(-126.52,2.705)]
+const scales = [Vector2(0.045,0.061), Vector2(0.102,0.135),Vector2(0.204,0.252),Vector2(0.43,0.492)]
+const positions = [Vector2(57.084,-39.78), Vector2(62.337,-24.115),Vector2(-11.305,-9.091),Vector2(-155,13.949)]
+const points = [0,10,40,100]
 
 const frequency = 5
 
@@ -26,7 +27,7 @@ func busStart():
 	busactive = 1
 	var i = 0
 	var fst = 0
-	bus_delay = randi_range(10,20)
+	bus_delay = randi_range(5,10)
 	bus.flip_h = false
 	while(i != 4):
 		if(fst != 0):
@@ -42,7 +43,7 @@ func busStart():
 	busactive = 0	
 	
 func _ready():
-	pass
+	var score = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
