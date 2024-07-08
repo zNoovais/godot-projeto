@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cslet2ile1cdn"]
+
+[ext_resource type="PackedScene" uid="uid://lo7ulyyo7w0c" path="res://assets/scenes/speechVisuals/characterSpeech.tscn" id="1_8xt2x"]
+
+[node name="CharacterTest0" type="Node2D"]
+
+[node name="CharacterSpeech" parent="." instance=ExtResource("1_8xt2x")]
+position = Vector2(546, 187)

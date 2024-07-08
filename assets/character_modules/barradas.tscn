@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck41h2mqdgc2"]
+
+[ext_resource type="Texture2D" uid="uid://bokr0pxpriwpa" path="res://assets/sprites/characters/character1.png" id="1_3il2h"]
+[ext_resource type="Texture2D" uid="uid://daqxmrfqaic4w" path="res://assets/sprites/characters/character1-2.png" id="2_hhual"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqauk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3il2h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3il2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hhual")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[node name="Barradas" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_hqauk")
+animation = &"talk"
+frame = 1
+frame_progress = 0.0144412

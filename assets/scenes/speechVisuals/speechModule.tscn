@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4us3eogo1uqx"]
+
+[ext_resource type="Script" path="res://assets/scenes/speechVisuals/speechModule.gd" id="1_rxxk2"]
+[ext_resource type="FontFile" uid="uid://clwghlliu0oag" path="res://assets/fonts/Lunatic.ttf" id="2_4xvjv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgj8n"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_rxxk2")
+
+[node name="text_box" type="MarginContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -206.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="text_box"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lgj8n")
+
+[node name="MarginContainer" type="MarginContainer" parent="text_box"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="text_box/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="text_box/MarginContainer"]
+layout_mode = 2
+
+[node name="strt" type="Label" parent="text_box/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_4xvjv")
+theme_override_font_sizes/font_size = 40
+text = "*"
+
+[node name="txt" type="Label" parent="text_box/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_4xvjv")
+theme_override_font_sizes/font_size = 53
+text = "Como está, cara amada? Eu tenho um vasto interesse em TV Girl, conhecidos também como Rapariga TV, um grupo indie bastante reconhecido a nível internacional. Eu, sendo um vasto apreciador deste mesmo grupo, tenho uma grande paixão, pela qual sou extremamente vocal, de fumar e manipular mulheres."
+autowrap_mode = 3
+clip_text = true
+
+[node name="end" type="Label" parent="text_box/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_4xvjv")
+theme_override_font_sizes/font_size = 40
+text = "v"
