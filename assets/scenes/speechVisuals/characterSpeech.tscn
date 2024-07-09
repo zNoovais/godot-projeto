@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://lo7ulyyo7w0c"]
+[gd_scene load_steps=8 format=3 uid="uid://lo7ulyyo7w0c"]
 
-[ext_resource type="Texture2D" uid="uid://bokr0pxpriwpa" path="res://assets/sprites/characters/character1.png" id="1_pmjl6"]
-[ext_resource type="Texture2D" uid="uid://daqxmrfqaic4w" path="res://assets/sprites/characters/character1-2.png" id="2_qmvnu"]
+[ext_resource type="Script" path="res://assets/scenes/speechVisuals/characterSpeech.gd" id="1_eoxuw"]
+[ext_resource type="Texture2D" uid="uid://bokr0pxpriwpa" path="res://assets/sprites/characters/Barradas/character1.png" id="1_pmjl6"]
+[ext_resource type="Texture2D" uid="uid://daqxmrfqaic4w" path="res://assets/sprites/characters/Barradas/character1-2.png" id="2_qmvnu"]
+[ext_resource type="FontFile" uid="uid://clwghlliu0oag" path="res://assets/fonts/Lunatic.ttf" id="3_r88bi"]
+[ext_resource type="AudioStream" uid="uid://cpmbj1kp4o0ls" path="res://tests/character_speech_test/barradasVc.mp3" id="4_45tes"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6mhff"]
 animations = [{
@@ -10,7 +13,7 @@ animations = [{
 "texture": ExtResource("1_pmjl6")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -21,15 +24,86 @@ animations = [{
 "texture": ExtResource("2_qmvnu")
 }],
 "loop": true,
-"name": &"speaking",
+"name": &"talking",
 "speed": 5.0
 }]
 
-[node name="CharacterSpeech" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n6ul"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-6, 8)
+[node name="CharacterSpeech" type="Node2D"]
+script = ExtResource("1_eoxuw")
+
+[node name="Character" type="AnimatedSprite2D" parent="."]
+position = Vector2(571, 239)
 sprite_frames = SubResource("SpriteFrames_6mhff")
-animation = &"speaking"
-frame = 1
-frame_progress = 0.287168
+animation = &"talking"
+speed_scale = 2.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Character"]
+stream = ExtResource("4_45tes")
+
+[node name="Speech" type="CanvasLayer" parent="."]
+
+[node name="text_box" type="MarginContainer" parent="Speech"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -206.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="Speech/text_box"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6n6ul")
+
+[node name="MarginContainer" type="MarginContainer" parent="Speech/text_box"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="Speech/text_box/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Speech/text_box/MarginContainer"]
+layout_mode = 2
+
+[node name="strt" type="Label" parent="Speech/text_box/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_r88bi")
+theme_override_font_sizes/font_size = 40
+text = "*"
+
+[node name="txt" type="Label" parent="Speech/text_box/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_r88bi")
+theme_override_font_sizes/font_size = 53
+text = "Texto default."
+autowrap_mode = 3
+clip_text = true
+
+[node name="end" type="Label" parent="Speech/text_box/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_r88bi")
+theme_override_font_sizes/font_size = 40
+text = "v"

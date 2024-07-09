@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dv7vfiwbkpptg"]
+
+[node name="CharacterSpeech" type="Node2D"]

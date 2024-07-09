@@ -59,7 +59,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("2_4xvjv")
 theme_override_font_sizes/font_size = 53
-text = "Como está, cara amada? Eu tenho um vasto interesse em TV Girl, conhecidos também como Rapariga TV, um grupo indie bastante reconhecido a nível internacional. Eu, sendo um vasto apreciador deste mesmo grupo, tenho uma grande paixão, pela qual sou extremamente vocal, de fumar e manipular mulheres."
+text = "Texto default."
 autowrap_mode = 3
 clip_text = true
 

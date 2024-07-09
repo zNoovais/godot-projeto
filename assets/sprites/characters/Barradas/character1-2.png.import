@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bokr0pxpriwpa"
-path="res://.godot/imported/character1.png-b424c5c5649ddbd8cb2d3f7d4516f8da.ctex"
+uid="uid://daqxmrfqaic4w"
+path="res://.godot/imported/character1-2.png-e82cfec9fbd0cb759c7af135d931e0ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/character1.png"
-dest_files=["res://.godot/imported/character1.png-b424c5c5649ddbd8cb2d3f7d4516f8da.ctex"]
+source_file="res://assets/sprites/characters/Barradas/character1-2.png"
+dest_files=["res://.godot/imported/character1-2.png-e82cfec9fbd0cb759c7af135d931e0ed.ctex"]
 
 [params]
 

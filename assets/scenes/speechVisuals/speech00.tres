@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="speech00" load_steps=2 format=3 uid="uid://csadnx6q558ky"]
+
+[ext_resource type="Script" path="res://tests/character_speech_test/Barradas_speech_resources_00.gd" id="1_f5ddb"]
+
+[resource]
+script = ExtResource("1_f5ddb")
+speech00 = Array[String](["Boas maltinha, como é?", "O meu nome é Barradas e sou um dos developers do jogo que estão a ver agora mesmo.", "No entanto, tenho algo a admitir....", "Eu nunca gostei de TV Girl.", "Estava só a gozar com um colega meu..", "A todas as alternas que magoei peço desculpa mas para ser honeste achava que não estava a funcionar.", "Se funcionou afinal gosto de TV Girl.", "O meu número é 913784224.", ";)"])

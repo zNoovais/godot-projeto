@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dph6tf3e042rc"]
+
+[ext_resource type="Texture2D" uid="uid://bokr0pxpriwpa" path="res://assets/sprites/characters/Barradas/character1.png" id="1_ktbwr"]
+[ext_resource type="Texture2D" uid="uid://daqxmrfqaic4w" path="res://assets/sprites/characters/Barradas/character1-2.png" id="2_pkiqi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k6hhq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ktbwr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ktbwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pkiqi")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 5.0
+}]
+
+[node name="Barradas" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_k6hhq")
+animation = &"talking"
